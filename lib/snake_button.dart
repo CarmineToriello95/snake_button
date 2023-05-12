@@ -1,7 +1,5 @@
 library snake_button;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/snake_button_controller.dart';
+export 'src/snake_button_painter.dart';
+export 'src/snake_button_widget.dart';
