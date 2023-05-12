@@ -22,7 +22,6 @@ class SnakeButtonPainter extends CustomPainter {
       rect,
       Radius.circular(borderRadius),
     );
-    print(animation.value);
 
     Paint paint = Paint()
       ..shader = SweepGradient(
@@ -30,7 +29,7 @@ class SnakeButtonPainter extends CustomPainter {
           snakeColor,
           Colors.transparent,
         ],
-        stops: [1.0, 1.0],
+        stops: const [1.0, 1.0],
         startAngle: 0.0,
         endAngle: vector.radians(360 * animation.value + 1),
       ).createShader(rect);

@@ -32,6 +32,11 @@ class _SnakeButtonState extends State<SnakeButton>
 
   @override
   void initState() {
+    super.initState();
+    _initControllers();
+  }
+
+  void _initControllers() {
     _animationController = AnimationController(
       vsync: this,
       duration: widget.snakeAnimationDuration,
@@ -41,21 +46,21 @@ class _SnakeButtonState extends State<SnakeButton>
 
     _buttonNotifier = ValueNotifier(false);
 
-    _animationController.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        _buttonNotifier.value = true;
-      } else if (status == AnimationStatus.dismissed) {
-        _buttonNotifier.value = false;
-      }
-    });
-    super.initState();
+    _animationController.addStatusListener(
+      (status) {
+        if (status == AnimationStatus.completed) {
+          _buttonNotifier.value = true;
+        } else if (status == AnimationStatus.dismissed) {
+          _buttonNotifier.value = false;
+        }
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
-      animation: _animationController,
-      builder: (context, child) {
-        return CustomPaint(
+        animation: _animationController,
+        builder: (context, child) => CustomPaint(
           foregroundPainter: SnakeButtonPainter(
             animation: _animationController,
             borderRadius: widget.borderRadius,
@@ -70,6 +75,6 @@ class _SnakeButtonState extends State<SnakeButton>
               child: widget.child,
             ),
           ),
-        );
-      });
+        ),
+      );
 }
