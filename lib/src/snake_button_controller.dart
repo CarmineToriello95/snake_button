@@ -10,4 +10,12 @@ class SnakeButtonController {
       animation.reverse();
     }
   }
+
+  void show() {
+    animation.forward();
+  }
+
+  void hide({double from = 1.0}) {
+    animation.reverse(from: from);
+  }
 }
