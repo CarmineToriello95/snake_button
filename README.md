@@ -2,5 +2,5 @@ A button that appears with a snake animation along the border.
 
 ## Demo
 
-<img src="/assets/snake_button_demo.gif" alt="drawing" width="200"/>
+https://github.com/CarmineToriello95/snake_button/assets/24319107/21a17ee4-2ca4-4605-a451-5acd6371ee22
 
