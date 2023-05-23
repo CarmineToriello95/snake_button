@@ -12,5 +12,9 @@
 
 ## 0.0.4
 
-* Point to local asset for demo
+* Tiny adjustment
+
+## 0.0.5
+
+* Updated demo video
 
