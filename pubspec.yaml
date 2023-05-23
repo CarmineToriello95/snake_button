@@ -1,6 +1,6 @@
 name: snake_button
 description: A button that appears with a snake animation along the border.
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/CarmineToriello95/snake_button
 
 environment:
