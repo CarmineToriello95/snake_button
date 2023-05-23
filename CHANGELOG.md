@@ -4,5 +4,5 @@
 
 ## 0.0.2
 
-* Updated CHANGELOG
+* Added demo video
 
